@@ -1,0 +1,63 @@
+.tree_outer, .tree_scd{width:auto;display:inline-block;}
+.tree_outer{position:relative;padding:30px;}
+.tree_scd{position:relative;white-space:nowrap;}
+.tree_scd:after{content:"";display:block;clear:both;}
+.tree_outer .line{display:block;position:absolute;z-index:5;top:-1px;left:0;height:2px;background-color:#ccc;border-radius:1px;}
+.tree_outer .item_box{margin:auto;padding:0 10px;}
+.tree_outer .item{width:110px;margin:auto;padding:1px 3px;text-align:center;font-size:.9em;line-height:1.5;white-space:normal;background-color:#df463b;color:#fff;}
+.tree_outer a{color:inherit;}
+.tree_outer .notice{background-color:#fff;color:#df463b;}
+.tree_outer .item p{width:100%;margin:3px 0;padding:3px;}
+.tree_outer .hide_input{display:none;}
+.white{background-color:#fff;}
+.block{display:block;margin:auto;}
+.tree_scd .out{display:inline-block;vertical-align:top;}
+.block_w90{width:90px;}
+.block_w120{width:120px;}
+.x_scroll{overflow-x:auto;text-align:center;}
+.btn_primary{min-width:70px;padding:8px 0;border-radius:3px;}
+.nowrap{white-space:nowrap;}
+/*树节点*/
+.tree_outer .after_line,.tree_outer .before_line{position:relative;}
+.tree_outer .after_line{margin-bottom:29px;}
+.tree_outer .before_line{margin-top:29px;}
+.tree_outer .after_line:after,.tree_outer .before_line:before{content:"";position:absolute;left:50%;height:30px;border-left:1px solid #999;}
+.tree_outer .after_line:after{bottom:-30px;}
+.tree_outer .before_line:before{top:-30px;}
+.color_hint{padding:0 15px;text-align:center;}
+.color_hint .item{display:inline-block;vertical-align:middle;margin:5px;width:10px;height:20px;}
+.rank1,.tree_outer .rank1{background-color:#1f820e;color:#fff;}
+.rank2,.tree_outer .rank2{background-color:#ccca1e;color:#fff;}
+.rank3,.tree_outer .rank3{background-color:#1e91cc;color:#fff;}
+.rank4,.tree_outer .rank4{background-color:#9d1ecc;color:#fff;}
+.rank5,.tree_outer .rank5{background-color:#f43838;color:#fff;}
+.rank0,.tree_outer .rank0{background-color:#ddd;color:#999;}
+.tree_outer .rank1 .notice{color:#1f820e;}
+.tree_outer .rank2 .notice{color:#ccca1e;}
+.tree_outer .rank3 .notice{color:#1e91cc;}
+.tree_outer .rank4 .notice{color:#9d1ecc;}
+.tree_outer .rank5 .notice{color:#f43838;}
+.tree_outer .rank0 .notice{color:inherit;}
+/*.theme_bg .theme_color{background-color:#fff;}*/
+/*!*梯层辅助线*!*/
+/*!*会员图谱*!*/
+.relation_box{width:100%;overflow-x:auto;padding-bottom:10px;}
+.gxt_out{border-top:2px solid #999;border-bottom:2px solid #999;text-align:center;}
+.gxt_out thead{border-bottom:inherit;}
+.gxt_out td{padding:0;height:3em;font-size:16px;}
+.gxt_out .gx_txt:hover{background-color:#ccc;color:#000;}
+.gxt_out td:not(.guide){min-width:75px;}
+.gxt_out td.gx_id{min-width:110px;text-align:left;padding-left:10px}
+.gx_id,.gx_txt{border-bottom:1px solid #eee;}
+.gx_txt{width:75px;}
+.gxt_out .guide{position:relative;width:38px;min-width:30px;z-index:10;}
+.guid_btn{width:18px;height:18px;padding:0;box-shadow:0 0 0 2px #fff;display:block;font-weight:bold;font-size:16px; background-color:#f43838;color:#fff;}
+.hide_guide{position:relative;z-index:9;display:inline-block;background-color:inherit;}
+.gxt_out .guide:after,.gxt_out .guide.x_line:before{content:"";position:absolute;z-index:-2;border:1px dashed #a0a0a0;}
+.gxt_out .guide:after{top:0;left:50%;bottom:0;border-right:inherit;}
+.gxt_out tr:first-child .guide:after{top:50%;}
+/*.gxt_child tr:last-child .guide.x_line:after,.gxt_child tr:last-child .guide:after{bottom:50%;}*/
+.gxt_out .guide.x_line:before{top:50%;left:-50%;right:0;border-top:inherit;}
+tr.gxt_child{display:none;}
+tr.gxt_child.active{display:table-row;}
+/*直推会员推荐*/

@@ -1,0 +1,81 @@
+@font-face{font-family:"iconfont";
+    src:url('../iconfont/iconfont.eot');
+    src:url('../iconfont/iconfont.eot?#iefix') format("embedded-opentype"),
+    url('../iconfont/iconfont.woff') format("woff"),
+    url('../iconfont/iconfont.ttf') format("truetype"),
+    url('../iconfont/iconfont.svg#iconfontyyy') format('svg');
+}
+.iconfont{font-family: 'iconfont';font-weight:normal;font-style:normal;-webkit-text-stroke-width: 0.2px;color:inherit;font-size:16px;}
+/*定义字体*/
+*{padding:0;margin:0;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+html,body{min-height:100%;font-size:100%;font-size:16px;}
+body{font-family:"Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,'宋体';word-wrap:break-word;word-break:break-all;overflow-y: auto;}
+header,nav,main,footer,section,article,aside,figure,figcaption{display: block;}
+h1,h2,h3,h4,h5,h6,i,b,em{font-weight:normal;font-style:normal;}
+ul,ol{list-style-type:none;}
+ins{text-decoration:none;}
+a,a:hover{color:inherit;text-decoration:none;}
+a.txt:hover{text-decoration:underline;}
+img{max-width:100%;max-height:100%;}
+iframe{display:block;padding-bottom:0;}
+table{width:100%;border-collapse:collapse;}
+table caption{font-size:1rem;margin-bottom:15px;}
+table td,table th{padding:6px;}
+input,select,textarea{border:1px solid #ddd;}
+select{background-color:#fff;color:inherit;border:1px solid currentColor;}
+option{background-color:#fff;color:#000;}
+input{padding:0 10px;}
+input[type="button"]{border:none;}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0;}
+input[type="number"]{-moz-appearance:textfield;}
+button,[data-role='button']{border:none;padding:.3em .6em;border-radius:.2em;box-shadow:0 0 1px #333;cursor:pointer;background-color:#ccc;}
+button:hover,button:active,
+input[type="button"]:hover,
+input[type="button"]:active,
+[data-role='button']:hover,
+[data-role='button']:active{opacity:.85;}
+button:active,
+input[type="button"]:active,
+[data-role='button']:active{ -webkit-box-shadow:none; box-shadow:none; }
+[data-role='onbtn']:hover{color:hsla(0,0%,100%,.5);background-color:hsla(0,0%,100%,.1);-webkit-box-shadow:0 0 1px #ddd;box-shadow:0 0 1px #ddd;}
+.red{color:red;}
+.theme_bg{background-color:#08a7a9;color:#fff;}
+.theme_color{color:#3f51b5;}
+[disabled]{cursor:text!important;background-color:#ccc;color:#999;-webkit-box-shadow:none;box-shadow:none;}
+[disabled]:hover,[disabled]:active{opacity:1;background-color:transparent;}
+.unable[disabled]{background-color:#ccc;color:#999;}
+.clearfix{}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+@media(min-width:480px){
+    .default_bar::-webkit-scrollbar{width:8px;height:8px;}
+    .default_bar::-webkit-scrollbar-track{background-color:#eee;border-radius:4px;}
+    .default_bar::-webkit-scrollbar-thumb{border-radius:4px;background-color:#aaa;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.2);box-shadow:inset 0 0 6px rgba(0,0,0,.2)}
+    .default_bar::-webkit-scrollbar-corner{background-color:transparent;}
+}
+*{
+    scrollbar-face-color:#eaeaea;
+    scrollbar-shadow-color:#eaeaea;
+    scrollbar-highlight-color:#eaeaea;
+    scrollbar-3dlight-color:#eaeaea;
+    scrollbar-darkshadow-color:#eaeaea;
+    scrollbar-track-color:#f7f7f7;
+    scrollbar-arrow-color:#666;
+}
+.hide{display:none;}
+.overflow_x,.x_scroll{width:100%;overflow-x:auto;}
+.border{border:1px solid red;}
+.change_ph::-webkit-input-placeholder{color:inherit;}
+.change_ph:-moz-placeholder{color:inherit;}
+.change_ph::-moz-placeholder{color:inherit;}
+.change_ph:-ms-input-placeholder{color:inherit;}
+.l{float:left;}
+.r{float:right;}
+.blue_bg{background-color:#327fe7;color:#fff;}
+.blue_bg2{background-color:#bccbcf;}
+.blue{color:#327fe7;}
+.reg_bg{background-color:#c70b0f;color:#fff;}
+.green_bg{background-color:#17be0a;color:#fff;}
+.gray_bg{background-color:#eee;color:#444;}
+.layui-form-switch{width:66px;height:24px;font-size:22px;}
+/*.layui-form-switch em{font-size:16px;}*/

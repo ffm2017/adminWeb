@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="css/allBasic.css">
+    <link rel="stylesheet" href="css/sitePage.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+    <title>会员管理</title>
+</head>
+<body>
+<div class="page_box">
+    <div class="page_box_head clearfix">
+        <div class="l">
+            <a class="mnav_btn list">用户中心></a>会员管理
+        </div>
+        <div class="r">
+            <a href="" class="refresh theme_bg">刷新</a>
+        </div>
+    </div>
+    <div class="page_box_content">
+        <div class="search_area">
+            时间范围:
+            <select class="f_element_h write w_120">
+                <option>一</option>
+                <option>二</option>
+            </select>
+            <input type="text" class="f_element_h write w_180" placeholder="输入用户名、姓名">
+            <button type="button" class="f_element_h btn_primary theme_bg">搜索</button>
+            <div class="time_box">
+                注册时间范围:
+                <!--sang_Calender-->
+                <input type="text" class="f_element_h write w_180 "  placeholder="年-月-日" id="timeStart">
+                 -
+                <input type="text" class="f_element_h write w_180 " placeholder="年-月-日" id="timeEnd">
+                <button type="button" class="f_element_h btn_primary theme_bg"><i class="iconfont">&#xe9c8;</i>导出资料</button>
+            </div>
+        </div>
+        <div class="tb_box">
+            <table class="tb_primary layui-form">
+                <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>用户</td>
+                    <td>手机号</td>
+                    <td>推荐人</td>
+                    <td>投注钱包</td>
+                    <td>现金钱包</td>
+                    <td>推荐奖</td>
+                    <td>分红奖</td>
+                    <td>返水</td>
+                    <td>注册时间</td>
+                    <td>激活时间</td>
+                    <td>操作</td>
+                    <td>封号</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>100020</td>
+                    <td><a href="user_info.html" class="user">10111</a></td>
+                    <td>15236984569</td>
+                    <td>张三</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>888</td>
+                    <td>888</td>
+                    <td>888</td>
+                    <td>2017-02-02 02:02:02</td>
+                    <td>2017-02-02 02:02:02</td>
+                    <td class="tb_w_4">
+                        <button type="button" class="green_bg btn">
+                            <a href="" title="首页"><i class="iconfont">&#xe642;</i></a>
+                        </button>
+                        <button type="button" class="green_bg btn">
+                            <a href="user_edit.html" title="会员编辑"><i class="iconfont">&#xe673;</i></a>
+                        </button>
+                        <button type="button" class="reg_bg btn delete">
+                            <a href="pwd_set.html" title="重置密码"><i class="iconfont">&#xe636;</i></a>
+                        </button>
+                    </td>
+                    <td class="tb_w_2">
+                        <button type="button" class="blue_bg btn delete">封号</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="page_nav">
+            <div id="paging"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/siteBasic.js"></script>
+<script src="js/datetime.js"></script>
+<script>
+    $().ready(function(){
+        btnToggleOnAndOff(".btn_madebox");
+        ifmOpenLeftBar(".mnav_btn");
+        refreshPage( ".refresh");
+    });
+    layui.use(['layer','laypage','form','laydate'], function(){
+        var laypage = layui.laypage,
+            layer = layui.layer,
+            form=layui.form,
+            laydate=layui.laydate;
+        form.render();
+        laypage.render({
+            elem: 'paging' //注意，这里的 test1 是 ID，不用加 # 号
+            ,count: 50 //数据总数，从服务端得到
+            ,curr:1
+            ,limit:15
+            ,layout:['count', 'prev', 'page', 'next', 'limit', 'skip']
+            ,jump:function(obj,first){
+                if(!first){
+
+                }
+            }
+        });
+        laydate.render({
+            elem:"#timeStart",
+            format:"yyyy年MM月dd日",
+            theme:"#098ae5"
+        });
+        laydate.render({
+            elem:"#timeEnd",
+            format:"yyyy年MM月dd日",
+            theme:"#098ae5"
+        });
+        deleteRowDt(".delete");
+        form.on("switch",function(){
+            layer.msg("修改成功!");
+        });
+    });
+    function deleteRowDt(btn){
+        $(btn).click(function(){
+            layer.confirm('确定封号？', {
+                btn: ['确定','消息'] //按钮
+            });
+        });
+    }
+</script>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="css/allBasic.css">
+    <link rel="stylesheet" href="css/sitePage.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>新会员注册</title>
+</head>
+<body class="fgt_pwd_wrap">
+<!--<div class="page_box">-->
+    <header class="head clearfix">
+        <h1 class="l line"><img src="img/logo.png" class="logo"></h1>
+        <h3 class="l title">新会员注册</h3>
+    </header>
+    <div class="page_box_content main">
+        <a href="login.html" class="back">已有账号，返回登录</a>
+        <div class="out_form_box">
+            <ul class="form_area f_word7">
+                <li>
+                    <label class="need">报单中心:</label>
+                    <div class="form_inputs yz _two">
+                        <input type="text" class="f_element_h write" name="" id="report_user_id">
+                        <input type="button" class="f_element_h check theme_bg" value="验证">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">推荐人编号:</label>
+                    <div class="form_inputs yz _two">
+                        <input type="text" class="f_element_h write" name="inviter_id" id="inviter_id" >
+                        <input type="button" class="f_element_h check theme_bg" value="验证" >
+                    </div>
+                </li>
+                <li>
+                    <label class="need">接点人编号:</label>
+                    <div class="form_inputs yz _two">
+                        <input type="text" class="f_element_h write" name="tree_id" id="tree_id">
+                        <input type="button" class="f_element_h check theme_bg" value="验证" >
+                    </div>
+                </li>
+                <li>
+                    <label class="need">等级:</label>
+                    <div class="form_inputs">
+                        <select class="f_element_h write" name="user_type_id" onchange="changeState()">
+                            <option value="22">22</option>
+                            <option value="22">33</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <label class="need">会员编号:</label>
+                    <div class="form_inputs yz _two">
+                        <input type="text" class="f_element_h write" name="user_name" id="user_name">
+                        <input type="button" class="f_element_h check theme_bg" value="验证" >
+                    </div>
+                </li>
+                <li>
+                    <label class="need">会员姓名:</label>
+                    <div class="form_inputs">
+                        <input type="text" class="f_element_h write"  name="true_name">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">身份证号码:</label>
+                    <div class="form_inputs" >
+                        <input type="text" class="f_element_h write" name="cardno">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">联系手机:</label>
+                    <div class="form_inputs" >
+                        <input type="number" class="f_element_h write" name="mobile_phone">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">登录密码:</label>
+                    <div class="form_inputs" >
+                        <input type="password" class="f_element_h write" name="new_pwd">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">确认登录密码:</label>
+                    <div class="form_inputs">
+                        <input type="password" class="f_element_h write"  name="new_pwd">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">安全密码:</label>
+                    <div class="form_inputs" >
+                        <input type="password" class="f_element_h write" name="save_pwd">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">确认安全密码:</label>
+                    <div class="form_inputs">
+                        <input type="password" class="f_element_h write"  name="save_pwd">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">银行名称:</label>
+                    <div class="form_inputs" >
+                        <select class="f_element_h write" name="mainbank">
+                            <option value="22">22</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <label class="need">开户人:</label>
+                    <div class="form_inputs" >
+                        <input type="text" class="f_element_h write" name="bank_user">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">银行卡号:</label>
+                    <div class="form_inputs" >
+                        <input type="text" class="f_element_h write" name="bank_code">
+                    </div>
+                </li>
+                <li>
+                    <label class="need">开户支行:</label>
+                    <div class="form_inputs" >
+                        <textarea class="write f_element_h" name="bank_name"></textarea>
+                    </div>
+                </li>
+                <li class="allw">
+                    <div class="form_inputs tj_box">
+                        <p class="protocols">
+                            <input type="checkbox" id="protocol_agree">
+                            <a href="javascript:void(0)" class="red">我已阅读协议书</a>
+                        </p>
+                        <button type="submit" class="submits f_element_h unable" disabled id="register">注册</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!--</div>-->
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="../public/js/layer.js"></script>
+<script>
+    $().ready(function(){
+        Agreement();
+    });
+    function Agreement(){
+        $("#protocol_agree").click(function(){
+            if($(this).is(":checked")){
+                $("#register").removeAttr("disabled").addClass("theme_bg");
+            }else{
+                $("#register").attr("disabled","disabled").removeClass("theme_bg");
+            }
+        });
+    }
+</script>
+</html>

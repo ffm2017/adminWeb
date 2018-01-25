@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="css/allBasic.css">
+    <link rel="stylesheet" href="css/sitePage.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+    <title></title>
+</head>
+<body>
+<div class="page_box">
+    <div class="page_box_head clearfix">
+        <div class="l">
+            <a class="mnav_btn list">角色管理</a>><a href="role_list.html" class="list">角色列表</a>>角色添加
+        </div>
+        <div class="r">
+            <a href="" class="refresh theme_bg">刷新</a>
+        </div>
+    </div>
+    <div class="page_box_content">
+        <ul class="form_area f_word5">
+            <li>
+                <label class="need">角色名称:</label>
+                <div class="form_inputs">
+                    <input type="text" class="f_element_h write" name="" id="report_user_id">
+                </div>
+            </li>
+            <li>
+                <label class="need">角色描述:</label>
+                <div class="form_inputs">
+                    <input type="text" class="f_element_h write" name="inviter_id" id="inviter_id" >
+                </div>
+            </li>
+            <li>
+                <label>权限分配:</label>
+                <div class="form_inputs">
+                    <fieldset class="form_fld ipt_box">
+                        <legend>
+                            <div class="ipt_all_box">
+                                <em class="iconfont btn">&#xe62f;</em>
+                                <input type="checkbox" class="ipt_all">
+                            </div>
+                            公告管理
+                        </legend>
+                        <button type="button"  class="check_madebox">
+                            <em>公告列表</em>
+                            <i class="iconfont btn">&#xe62f;</i>
+                            <input type="checkbox" class="ipt_hides" checked>
+                        </button>
+                        <button type="button"  class="check_madebox">
+                            <em>公告列表2</em>
+                            <i class="iconfont btn">&#xe62f;</i>
+                            <input type="checkbox" class="ipt_hides">
+                        </button>
+                    </fieldset>
+                    <fieldset class="form_fld ipt_box">
+                        <legend>
+                            <div class="ipt_all_box">
+                                <em class="iconfont btn">&#xe62f;</em>
+                                <input type="checkbox" class="ipt_all">
+                            </div>
+                            公告管理
+                        </legend>
+                        <button type="button"  class="check_madebox">
+                            <em>公告列表</em>
+                            <i class="iconfont btn">&#xe62f;</i>
+                            <input type="checkbox" class="ipt_hides" checked>
+                        </button>
+                        <button type="button"  class="check_madebox">
+                            <em>公告列表2</em>
+                            <i class="iconfont btn">&#xe62f;</i>
+                            <input type="checkbox" class="ipt_hides" checked>
+                        </button>
+                        <button type="button"  class="check_madebox">
+                            <em>公告列表88</em>
+                            <i class="iconfont btn">&#xe62f;</i>
+                            <input type="checkbox" class="ipt_hides" checked>
+                        </button>
+                        <button type="button"  class="check_madebox">
+                            <em>公告列表88</em>
+                            <i class="iconfont btn">&#xe62f;</i>
+                            <input type="checkbox" class="ipt_hides" disabled>
+                        </button>
+                    </fieldset>
+                </div>
+            </li>
+            <li>
+                <div class="form_inputs">
+                    <button type="submit" class="submits f_element_h w_300" >立即提交</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/siteBasic.js"></script>
+<script>
+    $().ready(function(){
+        ifmOpenLeftBar(".mnav_btn");
+        refreshPage( ".refresh");
+        AllcheckboxToggle(".ipt_all",".check_madebox");
+    });
+
+
+</script>
+
+</html>
